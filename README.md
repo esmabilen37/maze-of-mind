@@ -1,4 +1,5 @@
-# Maze of Mind 🧠🗺️
+# Maze of Mind 🧠🗺️  
+🎮 Oyuna bu linkten ulaşılabilir: [https://esmabilen37.github.io/maze-of-mind/](https://esmabilen37.github.io/maze-of-mind/)
 
 Maze of Mind, bulmaca türünde bir platform oyunudur. Oyun, [Maze of the Mini-Taur](https://z-richman.itch.io/maze-of-the-mini-taur) oyunundan ilham alınarak geliştirilmiştir.
 
