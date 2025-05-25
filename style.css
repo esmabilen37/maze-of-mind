@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('img/arkaplan.png'); /*arka plan resmi ekledim*/
+  background-size: cover; /* ekranı ful kaplasın diye */
+  background-position: center; /* ortaladım */
+  background-repeat: no-repeat; /* tekrarlanmasına gerek yok */
+}

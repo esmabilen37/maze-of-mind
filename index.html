@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Maze of Mind</title> 
+  <style>
+    /*genel ayarlamaları yaptım arka plan resmini canvas boyutlarını ayarladım*/
+    /*deneme yanılmalar ve ai desteği kullandım*/
+     body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('img/arkaplan.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  /*oyun alanı için*/
+    canvas {
+      image-rendering: pixelated;
+      border: 2px solid white;
+      background: black;
+    }
+    /*buton pozisyonları için*/
+    .controls {
+      position: relative;
+      width: fit-content;
+      margin: 10px auto;
+    }
+    .row-buttons, .col-buttons {
+      position: absolute;
+      display: flex;
+    }
+    .row-buttons {
+      top: 0;
+      left: 576px;
+      flex-direction: column;
+    }
+    .col-buttons {
+      top: -40px;
+      left: 0;
+      flex-direction: row;
+    }
+    .row-buttons button, .col-buttons button {
+      font-size: 24px;
+    }
+    .row-buttons button {
+      width: 40px;
+      height: 192px;
+    }
+    .col-buttons button {
+      width: 192px;
+      height: 40px;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="controls">
+    <canvas id="gameCanvas" width="576" height="576"></canvas>
+    <!-- baslangıc ekrani afilli olması için -->
+    <div id="startScreen" style="
+    position:fixed;
+    left:0; top:0; width:100vw; height:100vh;
+    background-image: url('img/arkaplan.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;">
+    <button id="startButton" style="
+      font-size:2rem;
+      padding:2rem 4rem;
+      border-radius:1rem;
+      cursor:pointer;
+      box-shadow: 0 0 20px #0008;
+      border: none;
+      background: #fff;
+      color: #222;
+      font-weight: bold;
+    ">
+      Başla
+    </button>
+  </div>
+    <!-- ekranda hamle yazısını gostermek için -->
+   <div id="moveCounter" style="position:absolute; left:-180px; top:0; font-size:2rem; color:white; background:#000a; padding:16px 24px; border-radius:12px;">
+    Hamle: 0
+  </div>
+  <!--r:yeniden baslatma olsun bilgisi için -->
+<div style="position:absolute; left:-200px; bottom:10px; color:white; font-size:1.2rem; background:#000a; padding:6px 14px; border-radius:8px; z-index:10;">
+  Yeniden Başlatma: <b>R</b>
+</div>
+<!-- level gecisi ekrani -->
+<div id="levelTransition" style="
+  position:fixed;
+  left:0; top:0; width:100vw; height:100vh;
+  background:rgba(0,0,0,0.7);
+  font-family: 'Impact', 'Arial Black', Arial, sans-serif;
+  color:#fff;
+  font-size:3rem;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:10000;
+  text-align:center;
+  pointer-events:none;
+">
+  Level 1
+</div>
+  
+
+
+    <!-- 3 sağ tuş satır kaysin diye-->
+    <div class="row-buttons">
+      <button id="row-btn-0">→</button>
+      <button id="row-btn-1">→</button>
+      <button id="row-btn-2">→</button>
+    </div>
+
+    <!-- 3 yukarı tuş sutun kaysın diye-->
+    <div class="col-buttons">
+      <button id="col-btn-0">↑</button>
+      <button id="col-btn-1">↑</button>
+      <button id="col-btn-2">↑</button>
+    </div>
+  </div>
+<!--javaScript dosyasının kaynağı*/-->
+  <script src="script.js"></script>
+</body>
+</html>
