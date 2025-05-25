@@ -63,6 +63,7 @@ Maze of Mind, bulmaca türünde bir platform oyunudur. Oyun, [Maze of the Mini-T
 - Karakter tasarımları **Pixilart** uygulamasıyla elle çizildi ve boyandı.
 - Tuzak görseli: [Platform Trap Pack](https://bdragon1727.itch.io/platfrom-trap-and-weapon)
 - Duvar görselleri: **Pixilart**
+- Arka plan görseli: [Seamless Space Backgrounds - Screaming Brain Studios](https://screamingbrainstudios.itch.io/seamless-space-backgrounds)
 - Platform yapısı matrisler kullanılarak kodlandı:
     - `0`: yol
     - `1`: duvar
